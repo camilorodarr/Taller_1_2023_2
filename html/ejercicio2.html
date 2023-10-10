@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Registro de Estudiantes</title>
+</head>
+
+<body>
+    <h1>Sistema de Registro de Estudiantes</h1>
+    <form id="registroForm">
+        Nombre:
+        <input type="text" id="nombre" required>
+
+        Edad:
+        <input type="number" id="edad" required>
+
+        Numero de Identificación:
+        <input type="text" id="identificacion" required>
+
+        <button type="button" onclick="agregarEstudiante()">Agregar Estudiante</button>
+    </form>
+
+    <h2>Buscar Estudiante</h2>
+    <form id="buscarForm">
+        Numero de Identificación a buscar:
+        <input type="text" id="buscarIdentificacion" required>
+
+        <button type="button" onclick="buscarEstudiante()">Buscar Estudiante</button>
+    </form>
+
+    <div id="resultado"></div>
+
+    <script src="../js/utilidades02.js"></script>
+</body>
+
+</html>

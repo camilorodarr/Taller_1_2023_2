@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Libros</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema de Gestión de Libros</h1>
+
+        <div id="agregarLibro">
+            <h2>Agregar Libro</h2>
+            Título:
+            <input type="text" id="titulo" placeholder="Ingrese el título">
+
+            Autor:
+            <input type="text" id="autor" placeholder="Ingrese el autor">
+
+            Año de Publicación:
+            <input type="number" id="año" placeholder="Ingrese el año">
+
+            <button onclick="agregarLibro()">Agregar Libro</button>
+        </div>
+
+        <div id="buscarLibro">
+            <h2>Buscar Libro</h2>
+            Título a buscar:
+            <input type="text" id="buscarTitulo" placeholder="Ingrese el título">
+
+            <button onclick="buscarLibro()">Buscar Libro</button>
+
+            <div id="resultado"></div>
+        </div>
+    </div>
+
+    <script src="../js/utilidades06.js"></script>
+</body>
+</html>

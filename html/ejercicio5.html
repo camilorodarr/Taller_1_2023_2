@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Preguntas y Respuestas</title>
+</head>
+
+<body>
+    <script>
+        const preguntasConRespuesta = [
+            { pregunta: "¿Cuál es la capital de Francia?", respuesta: "París" },
+            { pregunta: "¿Quién escribió 'Cien años de soledad'?", respuesta: "Gabriel García Márquez" },
+            { pregunta: "¿Quién pintó la Mona Lisa?", respuesta: "Leonardo da Vinci" },
+            { pregunta: "¿Cuál es el océano más grande?", respuesta: "Océano Pacífico" },
+            { pregunta: "¿En qué año comenzó la Primera Guerra Mundial?", respuesta: "1914" }
+        ];
+        function preguntasGeneradas() {
+            var puntuacion = 0;
+
+            for (let i = 0; i < preguntasConRespuesta.length; i++) {
+                const { pregunta, respuesta } = preguntasConRespuesta[i];
+                const respuestaIngresadaUsuario = prompt(`Pregunta ${i + 1}: ${pregunta}`);
+
+                if (respuestaIngresadaUsuario == null) break;
+                const respuestaCorrecta = respuesta.toLowerCase();
+                if (respuestaIngresadaUsuario.toLowerCase() === respuestaCorrecta) {
+                    alert("¡Excelente, esa es la respuesta correcta!");
+                    puntuacion++;
+                } else {
+                    alert(`Lo siento, la respuesta es incorrecta. La respuesta correcta es: ${respuesta}`);
+                }
+            }
+            alert(`Puntuación final: ${puntuacion} de ${preguntasConRespuesta.length} respuestas correctas`);
+        }
+
+        preguntasGeneradas();
+    </script>
+</body>
+
+</html>

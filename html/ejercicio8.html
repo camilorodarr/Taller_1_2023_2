@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Contraseñas</title>
+</head>
+<body>
+    <h1>Generador de Contraseñas</h1>
+    <form id="formulario-contrasena">
+        Longitud de la contraseña:
+        <input type="number" id="longitud" min="4" max="50" required>
+
+        Incluir mayúsculas:
+        <input type="checkbox" id="mayusculas">
+
+        Incluir números:
+        <input type="checkbox" id="numeros">
+
+        Incluir caracteres especiales:
+        <input type="checkbox" id="especiales">
+
+        <button type="button" onclick="generarContrasena()">Generar Contraseña</button>
+
+        <input type="text" id="contrasena" readonly>
+    </form>
+
+    <script src="../js/utilidades08.js"></script>
+</body>
+</html>
+
